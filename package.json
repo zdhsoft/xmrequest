@@ -1,36 +1,41 @@
 {
-  "name": "xmrequest",
-  "version": "0.0.2",
-  "description": "一个封装同步的request工具类",
-  "main": "index.js",
-  "scripts": {
-    "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zdhsoft/xmrequest.git"
-  },
-  "keywords": [
-    "request"
-  ],
-  "author": "zdhsoft",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/zdhsoft/xmrequest/blob/master/LICENSE"
+    "name": "xmrequest",
+    "version": "0.0.3",
+    "description": "一个封装同步的request工具类",
+    "main": "index.js",
+    "scripts": {
+        "build": "tsc",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/zdhsoft/xmrequest.git"
+    },
+    "keywords": [
+        "request"
+    ],
+    "author": "zdhsoft",
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/zdhsoft/xmrequest/blob/master/LICENSE"
+        }
+    ],
+    "dependencies": {
+        "got": "^11.8.2",
+        "xmcommon": "0.1.8"
+    },
+    "bugs": {
+        "url": "https://github.com/zdhsoft/xmcommon/issues"
+    },
+    "homepage": "https://github.com/zdhsoft/xmcommon#readme",
+    "devDependencies": {
+        "@types/got": "^9.6.11",
+        "@types/lodash": "^4.14.168",
+        "@types/node": "^10.17.59"
+    },
+    "engines": {
+        "node": ">=10.0.0",
+        "npm": ">=6.0.0"
     }
-  ],
-  "dependencies": {
-    "got": "^11.8.2",
-    "xmcommon": "0.1.8"
-  },
-  "bugs": {
-    "url": "https://github.com/zdhsoft/xmcommon/issues"
-  },
-  "homepage": "https://github.com/zdhsoft/xmcommon#readme",
-  "devDependencies": {
-    "@types/got": "^9.6.11",
-    "@types/lodash": "^4.14.168"
-  }
 }
