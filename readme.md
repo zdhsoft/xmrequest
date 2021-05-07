@@ -5,6 +5,10 @@
 - npm: https://www.npmjs.com/package/xmrequest
 
 ## 历史记录
+- 0.9.3
+  - 2021-05-07
+    - \+ 修改程序入口
+
 - 0.9.2
   - 2021-05-07
     - \+ 将GotUtils改名为xmrequest,重新发布

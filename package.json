@@ -2,7 +2,7 @@
     "name": "xmrequest",
     "version": "0.9.3",
     "description": "一个封装同步的request工具类",
-    "main": "index.js",
+    "main": "dist/index.js",
     "scripts": {
         "build": "tsc",
         "test": "echo \"Error: no test specified\" && exit 1"
