@@ -29,11 +29,11 @@ export interface IGotRequestReturn {
     response?: Response<string>;
 }
 /**
- * GotUtils说明
+ * xmrequest说明
  * - 由于request已经停止更新，并且已经标记为deprecated了，为了未来的使用考虑，所以使用got代替request, 实现了这个类
  * - 处理的结果与RequestUtils一样
  */
-export declare class GotUtils {
+export declare class xmrequest {
     /**
      * 初始化选项
      * - 这里会增加一个user-agent的header选项
@@ -83,3 +83,4 @@ export declare class GotUtils {
         response: any;
     }>;
 }
+export default xmrequest;

@@ -1,6 +1,6 @@
 {
     "name": "xmrequest",
-    "version": "0.9.1",
+    "version": "0.9.2",
     "description": "一个封装同步的request工具类",
     "main": "index.js",
     "scripts": {
@@ -12,7 +12,7 @@
         "url": "git+https://github.com/zdhsoft/xmrequest.git"
     },
     "keywords": [
-        "request"
+        "request", "got", "zdhsoft", "xmcommon", "xmrequest"
     ],
     "author": "zdhsoft",
     "licenses": [

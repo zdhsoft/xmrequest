@@ -1,10 +1,17 @@
-# 一个node下面简单封装的request请求
+# 一个基于got，再次封装的node下面简单封装的request请求
 - 注意版本要求node 10.x及以上版本 由于依赖got中的cacheable-lookup， 需要node>=10.6.0, so
 
 - github: https://github.com/zdhsoft/xmrequest
 - npm: https://www.npmjs.com/package/xmrequest
 
 ## 历史记录
+- 0.9.2
+  - 2021-05-07
+    - \+ 将GotUtils改名为xmrequest,重新发布
+```typescript
+import {xmrequest} from 'xmrequest';
+```
+
 - 0.9.1
   - 2021-05-07
     - \+ 增加MIT License文件

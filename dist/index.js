@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.GotUtils = exports.EnumGotUtilsError = exports.EnumHttpMethod = void 0;
+exports.xmrequest = exports.EnumGotUtilsError = exports.EnumHttpMethod = void 0;
 const got_1 = __importDefault(require("got"));
 const xmcommon_1 = __importDefault(require("xmcommon"));
 const lodash_1 = __importDefault(require("lodash"));
@@ -35,11 +35,11 @@ var EnumGotUtilsError;
     EnumGotUtilsError[EnumGotUtilsError["FAIL"] = -1] = "FAIL";
 })(EnumGotUtilsError = exports.EnumGotUtilsError || (exports.EnumGotUtilsError = {}));
 /**
- * GotUtils说明
+ * xmrequest说明
  * - 由于request已经停止更新，并且已经标记为deprecated了，为了未来的使用考虑，所以使用got代替request, 实现了这个类
  * - 处理的结果与RequestUtils一样
  */
-class GotUtils {
+class xmrequest {
     /**
      * 初始化选项
      * - 这里会增加一个user-agent的header选项
@@ -162,4 +162,5 @@ class GotUtils {
         });
     }
 }
-exports.GotUtils = GotUtils;
+exports.xmrequest = xmrequest;
+exports.default = xmrequest;
