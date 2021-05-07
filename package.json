@@ -1,6 +1,6 @@
 {
     "name": "xmrequest",
-    "version": "0.9.3",
+    "version": "0.9.4",
     "description": "一个封装同步的request工具类",
     "main": "dist/index.js",
     "scripts": {
