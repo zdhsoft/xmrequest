@@ -7,9 +7,6 @@
         "build": "tsc",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "publishConfig": {
-	"registry": "https://www.npmjs.com/package/xmrequest"
-    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/zdhsoft/xmrequest.git"
