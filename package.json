@@ -4,6 +4,7 @@
   "description": "一个封装同步的request工具类",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,6 +30,7 @@
   },
   "homepage": "https://github.com/zdhsoft/xmcommon#readme",
   "devDependencies": {
-    "@types/got": "^9.6.11"
+    "@types/got": "^9.6.11",
+    "@types/lodash": "^4.14.168"
   }
 }
