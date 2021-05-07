@@ -5,6 +5,10 @@
 - npm: https://www.npmjs.com/package/xmrequest
 
 ## 历史记录
+- 0.9.1
+  - 2021-05-07
+    - \+ 增加MIT License文件
+
 - 0.9.0
   - 2021-05-07
     - \+ 实现GotUtils
