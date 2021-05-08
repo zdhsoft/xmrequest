@@ -5,6 +5,9 @@
 - npm: https://www.npmjs.com/package/xmrequest
 
 ## 历史记录
+- 1.0.2
+  - 2021-05-08
+    - \+ 将package.json增加license为MIT
 - 1.0.1
   - 2021-05-08
     - \+ 修复返回值不是统一接口 IGotRequestReturn 的bug
