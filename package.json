@@ -21,9 +21,9 @@
         "xmcommon": "0.1.8"
     },
     "bugs": {
-        "url": "https://github.com/zdhsoft/xmcommon/issues"
+        "url": "https://github.com/zdhsoft/xmrequest/issues"
     },
-    "homepage": "https://github.com/zdhsoft/xmcommon#readme",
+    "homepage": "https://github.com/zdhsoft/xmrequest#readme",
     "devDependencies": {
         "@types/got": "^9.6.11",
         "@types/lodash": "^4.14.168",
