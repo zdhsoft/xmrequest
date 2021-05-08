@@ -1,6 +1,6 @@
 {
     "name": "xmrequest",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "一个封装同步的request工具类",
     "main": "dist/index.js",
     "scripts": {
@@ -15,12 +15,7 @@
         "request", "got", "zdhsoft", "xmcommon", "xmrequest"
     ],
     "author": "zdhsoft",
-    "licenses": [
-        {
-            "type": "MIT",
-            "url": "https://github.com/zdhsoft/xmrequest/blob/master/LICENSE"
-        }
-    ],
+    "license": "MIT",
     "dependencies": {
         "got": "^11.8.2",
         "xmcommon": "0.1.8"
