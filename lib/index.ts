@@ -79,16 +79,18 @@ export class xmrequest {
      * @return 响应结果
      */
     public static async post(paramURL: string, paramBody: any, paramOptions: Options = {}, paramheaders: Headers = {}): Promise<IGotRequestReturn> {
+
         let options = this.initOptions(paramOptions,  EnumHttpMethod.post, paramheaders);
         options.form = paramBody;
+        let ret: IGotRequestReturn;
 
         try {
             // 实际上，这里返回的是CancelableRequest<Response<string>>;
             // 但是用它的时候，访问statusCode，会被提示要加await，实际是这个是没有的
             const r = (await got(paramURL, options)) as any;
-            return {error: undefined, statusCode: r.statusCode, statusMessage: r.statusMessage, body: r.body, response: r.response};
+            ret = {error: undefined, statusCode: r.statusCode, statusMessage: r.statusMessage, body: r.body, response: r.response};
         }catch(e) {
-            let ret: IGotRequestReturn = { error: e };
+            ret = { error: e };
             if (xmcommon.utils.isNotNull(e.response)) {
                 ret.statusCode    = e.response.statusCode;
                 ret.statusMessage = e.response.statusMessage;
@@ -97,8 +99,8 @@ export class xmrequest {
                 ret.statusCode    = EnumGotUtilsError.FAIL;
                 ret.statusMessage = e.message;
             }
-            return ret;
         }
+        return ret;
     }
     /**
      * 这个是通过 application/x-www-form-urlencoded 方式上传参数
@@ -112,11 +114,13 @@ export class xmrequest {
         let options = this.initOptions(paramOptions, EnumHttpMethod.post, paramheaders);
         options.json = paramBody;
 
+        let ret: IGotRequestReturn;
+
         try {
             const r = (await got(paramURL, options)) as any;
-            return {error: undefined, statusCode: r.statusCode, statusMessage: r.statusMessage, body: r.body, response: r.response};
+            ret = {error: undefined, statusCode: r.statusCode, statusMessage: r.statusMessage, body: r.body, response: r.response};
         }catch(e) {
-            let ret: IGotRequestReturn = { error: e };
+            ret = { error: e };
             if (xmcommon.utils.isNotNull(e.response)) {
                 ret.statusCode    = e.response.statusCode;
                 ret.statusMessage = e.response.statusMessage;
@@ -125,8 +129,8 @@ export class xmrequest {
                 ret.statusCode    = EnumGotUtilsError.FAIL;
                 ret.statusMessage = e.message;
             }
-            return ret;
         }
+        return ret;
     }
     /**
      * 这个是通过 get 方法调用请求
@@ -139,12 +143,12 @@ export class xmrequest {
     public static async get(paramURL: string, paramBody: Record<string, string>, paramOptions = {}, paramheaders = {}) {
         let options = this.initOptions(paramOptions, EnumHttpMethod.get, paramheaders = {});
         options.searchParams = new URLSearchParams(paramBody);
-
+        let ret: IGotRequestReturn;
         try {
             const r = (await got(paramURL, options)) as any;
-            return {error: undefined, statusCode: r.statusCode, statusMessage: r.statusMessage, body: r.body, response: r.response};
+            ret = {error: undefined, statusCode: r.statusCode, statusMessage: r.statusMessage, body: r.body, response: r.response};
         }catch(e) {
-            let ret: IGotRequestReturn = { error: e };
+            ret = { error: e };
             if (xmcommon.utils.isNotNull(e.response)) {
                 ret.statusCode    = e.response.statusCode;
                 ret.statusMessage = e.response.statusMessage;
@@ -153,8 +157,8 @@ export class xmrequest {
                 ret.statusCode    = EnumGotUtilsError.FAIL;
                 ret.statusMessage = e.message;
             }
-            return ret;
         }
+        return ret;
     }
 }
 export default xmrequest;

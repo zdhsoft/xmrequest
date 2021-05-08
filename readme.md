@@ -5,6 +5,9 @@
 - npm: https://www.npmjs.com/package/xmrequest
 
 ## 历史记录
+- 1.0.1
+  - 2021-05-08
+    - \+ 修复返回值不是统一接口 IGotRequestReturn 的bug
 - 1.0.0
   - 2021-05-07
     - \+ 1.0版正式发布
@@ -102,13 +105,7 @@ export declare class xmrequest {
      * @param paramHeaders 请求的headers信息
      * @returns 响应结果
      */
-    static jsonPost(paramURL: string, paramBody: any, paramOptions?: Options, paramheaders?: Headers): Promise<IGotRequestReturn | {
-        error: undefined;
-        statusCode: any;
-        statusMessage: any;
-        body: any;
-        response: any;
-    }>;
+    static jsonPost(paramURL: string, paramBody: any, paramOptions?: Options, paramheaders?: Headers): Promise<IGotRequestReturn>;
     /**
      * 这个是通过 get 方法调用请求
      * @param paramURL 请求的URL
@@ -117,14 +114,9 @@ export declare class xmrequest {
      * @param {object} paramHeaders 请求的headers信息
      * @returns {{error ?: object, statusCode ?: number, statusMessage ?: string, body ?: string, response ?: any}} 响应结果
      */
-    static get(paramURL: string, paramBody: Record<string, string>, paramOptions?: {}, paramheaders?: {}): Promise<IGotRequestReturn | {
-        error: undefined;
-        statusCode: any;
-        statusMessage: any;
-        body: any;
-        response: any;
-    }>;
+    static get(paramURL: string, paramBody: Record<string, string>, paramOptions?: {}, paramheaders?: {}): Promise<IGotRequestReturn>;
 }
 export default xmrequest;
+
 
 ```

@@ -60,13 +60,7 @@ export declare class xmrequest {
      * @param paramHeaders 请求的headers信息
      * @returns 响应结果
      */
-    static jsonPost(paramURL: string, paramBody: any, paramOptions?: Options, paramheaders?: Headers): Promise<IGotRequestReturn | {
-        error: undefined;
-        statusCode: any;
-        statusMessage: any;
-        body: any;
-        response: any;
-    }>;
+    static jsonPost(paramURL: string, paramBody: any, paramOptions?: Options, paramheaders?: Headers): Promise<IGotRequestReturn>;
     /**
      * 这个是通过 get 方法调用请求
      * @param paramURL 请求的URL
@@ -75,12 +69,6 @@ export declare class xmrequest {
      * @param {object} paramHeaders 请求的headers信息
      * @returns {{error ?: object, statusCode ?: number, statusMessage ?: string, body ?: string, response ?: any}} 响应结果
      */
-    static get(paramURL: string, paramBody: Record<string, string>, paramOptions?: {}, paramheaders?: {}): Promise<IGotRequestReturn | {
-        error: undefined;
-        statusCode: any;
-        statusMessage: any;
-        body: any;
-        response: any;
-    }>;
+    static get(paramURL: string, paramBody: Record<string, string>, paramOptions?: {}, paramheaders?: {}): Promise<IGotRequestReturn>;
 }
 export default xmrequest;
